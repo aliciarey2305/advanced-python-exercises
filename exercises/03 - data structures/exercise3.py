@@ -20,10 +20,14 @@ inv_dict = invert(test_dict)
 print(inv_dict)
 
 
-"""def spongecase(text):
-    print(len(text))
-    rand_vector = round(rn.randint(0, 1, len(text)))
-    print(rand_vector)
-    return
+def spongecase(text):
+    spongetext = ''
+    for i in range(len(text)):
+        if rn.randint(1,100) % 2 == 0:
+            spongetext += text[i].upper()
+        else:
+            spongetext += text[i]
 
-print(spongecase('aaa'))"""
+    return spongetext
+
+print(spongecase('Using SpongeBob memes does not make you witty'))
